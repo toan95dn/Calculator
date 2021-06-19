@@ -1,0 +1,83 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    max-width: 100vw;
+    min-height:100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    background-color: #ECAF44;
+}
+
+/* CALCULATOR */
+.calculator{
+    padding: 15px;
+    height: 550px;
+    border-radius: 15px;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* SCREEN */
+.screen{
+    background-color: #0C1115;
+    border-radius: 15px;
+    width: 350px;
+    height: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 60px;
+    color: #BE2F29;
+}
+
+
+/* DELETE + RESET BUTTONS */
+.delete{
+    width: 350px;
+    height: 13%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete button{
+    height: 40px;
+    width: 49%;
+    font-size: x-large;
+    font-family: inherit;
+    border-radius: 15px;
+}
+
+/* NUMBERS + OPERATORS */
+.numbersandoperator{
+    width: 350px;
+    height:350px;
+    background-color: #0C1115    ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    border-radius: 15px;
+}
+
+.numbersandoperator button{
+    width: 90%;
+    height: 90%;
+    justify-self: center;
+    align-self: center;
+    font-size: x-large;
+    font-family: inherit;
+    border-radius: 15px;
+}
