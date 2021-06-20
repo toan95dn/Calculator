@@ -91,6 +91,7 @@ button:hover{
     .screen{
         width: 280px;
         height: 20%;
+        font-size: 40px;
     }
 
     .numbersandoperator{
