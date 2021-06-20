@@ -56,7 +56,12 @@ function displayOnScreen(number) {
         screen.innerText = number;
     }
     else {
-        screen.innerText = number.slice(number.length - 10, number.length);
+        if (!number.includes('.')) {
+            screen.innerText = number.slice(number.length - 10, number.length);
+        }
+        else {
+            screen.innerText = number.substr(0, 11);
+        }
     }
 }
 
@@ -88,7 +93,7 @@ function calculateResult(firstNum, secondNum, operator) {
             displayOnScreen(nextNumber);
         }
         else {
-            currNumber = currNumber.substr(0, nextNumber.length - 1);
+            currNumber = currNumber.substr(0, currNumber.length - 1);
             displayOnScreen(currNumber);
         }
     });

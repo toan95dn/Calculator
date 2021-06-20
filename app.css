@@ -81,3 +81,24 @@ body{
     font-family: inherit;
     border-radius: 15px;
 }
+
+/* Button hover effect */
+button:hover{
+    color: #BE2F29 ;
+}
+
+@media only screen and (max-width: 440px){
+    .screen{
+        width: 280px;
+        height: 20%;
+    }
+
+    .numbersandoperator{
+        width: 280px;
+        height: 280px;
+    }
+
+    .delete{
+        width: 280px;
+    }
+}
