@@ -56,21 +56,17 @@ function displayOnScreen(number) {
         screen.innerText = number;
     }
     else {
-        if (!number.includes('.')) {
-            screen.innerText = number.slice(number.length - 10, number.length);
-        }
-        else {
-            screen.innerText = number.substr(0, 11);
-        }
+        screen.innerText = number.substr(0, 11);
     }
 }
 
 function calculateResult(firstNum, secondNum, operator) {
     if (nextNumber !== '') {
-        if (operator === '+') { currNumber = (parseFloat(firstNum) + parseFloat(secondNum)).toString(); }
-        if (operator === '-') { currNumber = (parseFloat(firstNum) - parseFloat(secondNum)).toString(); }
-        if (operator === 'X') { currNumber = (parseFloat(firstNum) * parseFloat(secondNum)).toString(); }
-        if (operator === '/') { currNumber = (parseFloat(firstNum) / parseFloat(secondNum)).toString(); }
+        if (operator === '+') { currNumber = (Number(firstNum) + Number(secondNum)).toString(); }
+        if (operator === '-') { currNumber = (Number(firstNum) - Number(secondNum)).toString(); }
+        if (operator === 'X') { currNumber = (Number(firstNum) * Number(secondNum)).toString(); }
+        if (operator === '/') { currNumber = (Number(firstNum) / Number(secondNum)).toString(); }
+        currNumber = (Math.round(Number(currNumber) * 1000) / 1000).toString();
         displayOnScreen(currNumber);
         nextNumber = '';
         currOperator = '';
